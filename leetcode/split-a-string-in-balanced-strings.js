@@ -2,16 +2,14 @@
 var balancedStringSplit = function(s) {
   const chars = s.split("");
   let result = 0;
-  let LIndex = 0;
-  let RIndex = 0;
+  let index = 0;
   chars.forEach(char => {
-    char === "L" ? LIndex++ : RIndex++;
-    if (LIndex === RIndex) {
+    char === "L" ? index++ : index--;
+    if (index === 0) {
       result++;
-      LIndex = RIndex = 0;
     }
   });
-  if (LIndex > 0 || RIndex > 0) {
+  if (index > 0) {
     result++;
   }
   return result;
