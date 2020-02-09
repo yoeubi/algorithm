@@ -16,7 +16,6 @@ var diStringMatch = function(S) {
     } else {
       num = next === current ? max-- : min++;
     }
-    console.log(max, min, num);
     result.push(num);
   });
   return result;
