@@ -1,13 +1,12 @@
 // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 var preorder = function(root) {
-  let queue = [];
+  let stack = [root];
   const result = [];
   let node;
-  queue.push(root);
-  while ((node = queue.pop())) {
+  while ((node = stack.pop())) {
     result.push(node.val);
     if (node.children) {
-      queue = queue.concat(node.children.reverse());
+      stack = stack.concat(node.children.reverse());
     }
   }
   return result;
