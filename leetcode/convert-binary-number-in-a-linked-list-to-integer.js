@@ -12,8 +12,13 @@ var getDecimalValue = function(head) {
   }, 0);
 };
 
-console.log([1, 0, 1]);
-console.log();
-console.log();
-console.log();
-console.log();
+// 2nd
+var getDecimalValue = function(head) {
+  let node = head;
+  let result = "";
+  while (node) {
+    result += node.val;
+    node = node.next;
+  }
+  return parseInt(result, 2);
+};
