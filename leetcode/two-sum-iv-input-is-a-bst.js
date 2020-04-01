@@ -11,3 +11,16 @@ var findTarget = function(root, k) {
   }
   return false;
 };
+
+var findTarget = function(root, k) {
+  const queue = [root];
+  const val = {};
+  while (queue.length > 0) {
+    const node = queue.shift();
+    if (val[k - node.val]) return true;
+    val[node.val] = true;
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+  return false;
+};
