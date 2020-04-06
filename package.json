@@ -1,0 +1,20 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git add . && git commit -m \"oneday algorithm\" && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoeubi/algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoeubi/algorithm/issues"
+  },
+  "homepage": "https://github.com/yoeubi/algorithm#readme"
+}
