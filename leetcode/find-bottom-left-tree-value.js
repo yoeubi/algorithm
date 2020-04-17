@@ -11,6 +11,6 @@ var findBottomLeftValue = function (root) {
     }
     traverse(node.right, dep + 1);
   }
-  traverse(root, true, 0);
+  traverse(root, 1);
   return val;
 };
