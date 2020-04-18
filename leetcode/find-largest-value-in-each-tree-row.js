@@ -1,11 +1,11 @@
 // https://leetcode.com/problems/find-largest-value-in-each-tree-row/
 var largestValues = function (root) {
-  const queue = [];
+  if (!root) return [];
+  const queue = [root];
   const result = [];
-  if (root) queue.push(root);
   while (queue.length > 0) {
     let size = queue.length;
-    let max = queue[0].val;
+    let max = -Infinity;
     while (size--) {
       const node = queue.shift();
       if (node.val > max) max = node.val;
