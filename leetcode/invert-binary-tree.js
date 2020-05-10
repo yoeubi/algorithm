@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/invert-binary-tree/
-var invertTree = function(root) {
+var invertTree = function (root) {
   function traverse(node) {
     if (node == null) return;
     if (node.left && node.right) {
@@ -19,5 +19,14 @@ var invertTree = function(root) {
     }
   }
   traverse(root);
+  return root;
+};
+
+var invertTree = function (root) {
+  if (root == null) return null;
+  const right = invertTree(root.right);
+  const left = invertTree(root.left);
+  root.left = right;
+  root.right = left;
   return root;
 };
