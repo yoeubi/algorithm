@@ -10,3 +10,11 @@ var kidsWithCandies = function (candies, extraCandies) {
   }
   return result;
 };
+
+var kidsWithCandies = function (candies, extraCandies) {
+  var max = Math.max(...candies);
+  var res = candies.map((candy) => {
+    return candy + extraCandies >= max;
+  });
+  return res;
+};
