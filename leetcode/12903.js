@@ -4,4 +4,4 @@ function solution(s) {
   const centerIndex = Math.floor(s.length / 2);
   return isOdd ? s[centerIndex] : s.substring(centerIndex - 1, centerIndex + 1);
 }
-//test 2
+//test 3
